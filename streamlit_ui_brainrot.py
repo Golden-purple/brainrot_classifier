@@ -5,7 +5,7 @@ import numpy as np
 
 # @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("breinrot_classifier_vgg16.keras")
+    model = tf.keras.models.load_model("models/breinrot_classifier_vgg16.keras")
     return model
 
 model = load_model()
