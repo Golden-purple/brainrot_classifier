@@ -3,7 +3,7 @@ import tensorflow as tf
 from PIL import Image
 import numpy as np
 
-# @st.cache_resource
+@st.cache_resource
 def load_model():
     model = tf.keras.models.load_model("models/breinrot_classifier_vgg16.keras")
     return model
