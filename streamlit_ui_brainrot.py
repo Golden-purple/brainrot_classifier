@@ -4,15 +4,16 @@ from PIL import Image
 import numpy as np
 import requests
 import tempfile
+import gdown
 
 @st.cache_resource
+
 def load_model():
-    url = "https://drive.google.com/uc?export=download&id=1l2HiQf1WN7itOc_e1ozFYBnaj0YS9vI2" 
-    with tempfile.NamedTemporaryFile(suffix=".keras") as tmp:
-        r = requests.get(url)
-        tmp.write(r.content)
-        tmp.flush()
-        model = tf.keras.models.load_model(tmp.name)
+    model_path = "models/breinrot_classifier_vgg16.keras"
+    if not os.path.exists(model_path):
+        url = "https://drive.google.com/uc?export=download&id=1l2HiQf1WN7itOc_e1ozFYBnaj0YS9vI2"
+        gdown.download(url, model_path, quiet=False)
+    model = tf.keras.models.load_model(model_path)
     return model
 
 model = load_model()
