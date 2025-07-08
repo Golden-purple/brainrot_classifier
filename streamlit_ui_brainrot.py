@@ -10,9 +10,9 @@ import gdown
 @st.cache_resource
 
 def load_model():
-    model_path = "models/breinrot_classifier_vgg16.keras"
+    model_path = "models/breinrot_classifier_vgg16.h5"
     if not os.path.exists(model_path):
-        url = "https://drive.google.com/uc?export=download&id=1l2HiQf1WN7itOc_e1ozFYBnaj0YS9vI2"
+        url = "https://drive.google.com/uc?export=download&id=1U-0JPPvGBQvEK5dlJ-xBrqW_z-963WIa"
         gdown.download(url, model_path, quiet=False)
     model = tf.keras.models.load_model(model_path)
     return model
