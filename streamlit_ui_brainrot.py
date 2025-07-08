@@ -4,6 +4,7 @@ from PIL import Image
 import numpy as np
 import requests
 import tempfile
+import os
 import gdown
 
 @st.cache_resource
