@@ -1,4 +1,7 @@
 # brainrot_classifier
+
+https://brainrot-classifier.streamlit.app/
+
 can identify italian breinrot.
 
 currently identifies tung tung tung tung sahur, tralalero tralala, ballerina cappucina and patapim. 
